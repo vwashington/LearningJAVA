@@ -53,15 +53,26 @@ public class HangmanGame {
 	public static void startGame(List<String> wordList, String[] topicList)
 	{
 		Scanner inputLetter = new Scanner(System.in);
-		char letter;
+		char letter,upletter;
+		int wordIndex 0;
 		int correct = 0;
 		int wrong = 0;
+		
+		//Select Random Wrod from List
+		wordIndex = RandNumber(0,(topicList.length-1));
+		topicList[wordIndex] = topicList[wordIndex].toUpperCase();
+		char[] word = topicList[wordIndex].toCharArray();
 		
 		while(wrong < 8)
 		{
 			System.out.println("\n\n\n\n\n\n\n\n");
 			System.out.println("Enter a Letter");
 			letter = (char)inputLetter.nextInt();
+			upletter = Character.toUpperCase(letter);
+			for(int x =0; x < word.length;x++)
+					if(letter == word[x])
+						correct++;
+			
 		}
 		
 	}
