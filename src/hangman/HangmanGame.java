@@ -54,7 +54,7 @@ public class HangmanGame {
 	{
 		Scanner inputLetter = new Scanner(System.in);
 		char letter,upletter;
-		int wordIndex 0;
+		int wordIndex = 0;
 		int correct = 0;
 		int wrong = 0;
 		
